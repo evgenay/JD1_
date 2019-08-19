@@ -17,11 +17,11 @@ public class Task31 {
 			a = Math.random() * 15;
 			a = (int) a;
 
-			System.out.println(a);
+			//System.out.println(a); - покажет задуманное число
 
 			@SuppressWarnings("resource")
 			Scanner sc = new Scanner(System.in);
-			System.out.print("Введите числа от 1 до 15 ");
+			System.out.print("Введите число от 1 до 15 ");
 			System.out.print("> ");
 
 			while (!sc.hasNextInt()) {
