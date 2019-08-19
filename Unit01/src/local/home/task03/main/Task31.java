@@ -28,7 +28,6 @@ public class Task31 {
 				sc.next();
 				System.out.print("Неверное значение, повторите ещё раз>  ");
 			}
-
 			b = sc.nextInt();
 
 			if (a == b) {
@@ -36,11 +35,9 @@ public class Task31 {
 			} else if (a != b) {
 				System.out.println("Цифру вы не угадали -  " + b);
 				System.out.println("Цифра ПК - " + a);
-
 			}
 			c++;
 		} while (c <= 5);
 		System.out.println("---Конец игры--- ");
-
 	}
 }
