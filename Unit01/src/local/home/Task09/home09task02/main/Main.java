@@ -1,5 +1,9 @@
 package local.home09task02.main;
 
+/* Создать объект класса Автомобиль, используя классы Колесо, Двигатель. Методы: ехать, заправляться,
+ * менять колесо, вывести на консоль марку автомобиля. 
+ */
+
 public class Main {
 	public static void main(String[] args) {
 		Car car = new Car("Ford Mondeo", new Engine("АИ 95 ", 1.8), new Wheel(16), (2010));
