@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import by.tc.task01.entity.criteria.Criteria;
-import entity.criteria.SearchCriteria.Oven;
-import java.util.regex.Pattern;
+import by.tc.task01.entity.criteria.SearchCriteria.Oven;
+import by.tc.task01.java.util.regex.Pattern;
 
 public class Validator {
 	
