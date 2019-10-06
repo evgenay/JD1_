@@ -1,6 +1,11 @@
 package by.tc.task01.service.validation;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 import by.tc.task01.entity.criteria.Criteria;
+import entity.criteria.SearchCriteria.Oven;
+import java.util.regex.Pattern;
 
 public class Validator {
 	
