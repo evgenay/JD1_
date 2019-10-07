@@ -9,44 +9,24 @@ import by.tc.task01.service.ApplianceService;
 import by.tc.task01.service.ServiceFactory;
 
 public class Main {
-
 	public static void main(String[] args) {
-		Appliance appliance;
+	List<Appliance> appliance;
 
-		ServiceFactory factory = ServiceFactory.getInstance();
-		ApplianceService service = factory.getApplianceService();
+	ServiceFactory factory = ServiceFactory.getInstance();
+	ApplianceService service = factory.getApplianceService();
 
-		//////////////////////////////////////////////////////////////////
-
-		Criteria<Oven> criteriaOven = new Criteria<Oven>(Oven.class);
-		criteriaOven.add(Oven.CAPACITY, 3);
-
-
-		appliance = service.find(criteriaOven);
-
-		PrintApplianceInfo.print(appliance);
-
-		//////////////////////////////////////////////////////////////////
-
-		criteriaOven = new Criteria<Oven>(Oven.class);
-		criteriaOven.add(Oven.HEIGHT, 200);
-		criteriaOven.add(Oven.DEPTH, 300);
-
-		appliance = service.find(criteriaOven);
-
-		PrintApplianceInfo.print(appliance);
-
-		//////////////////////////////////////////////////////////////////
-		
-		Criteria<TabletPC> criteriaTabletPC = new Criteria<TabletPC>(TabletPC.class);
-		criteriaTabletPC.add(TabletPC.COLOR, "BLUE");
-		criteriaTabletPC.add(TabletPC.DISPLAY_INCHES, 14);
-		criteriaTabletPC.add(TabletPC.MEMORY_ROM, 4);
-
-		appliance = service.find(criteriaTabletPC);
-
-		PrintApplianceInfo.print(appliance);
-
-	}
-
+	Criteria criteriaRefrigerator = new Criteria(Refrigerator.class.getSimpleName());
+	criteriaRefrigerator.add(Refrigerator.FREEZER_CAPACITY.toString(), 10);
+	appliance = service.find(criteriaRefrigerator);
+	PrintApplianceInfo.print(appliance);
+	
+	criteriaRefrigerator.add(Refrigerator.FREEZER_CAPACITY.toString(), 15);
+	appliance = service.find(criteriaRefrigerator);
+	PrintApplianceInfo.print(appliance);
+	
+	criteriaRefrigerator = new Criteria(Refrigerator.class.getSimpleName());
+	criteriaRefrigerator.add(Refrigerator.HEIGHT.toString(), 10);
+	appliance = service.find(criteriaRefrigerator);
+	PrintApplianceInfo.print(appliance);
+ 	}
 }
