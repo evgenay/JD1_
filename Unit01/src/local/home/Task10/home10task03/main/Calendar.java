@@ -58,11 +58,11 @@ public class Calendar {
 		private boolean holiday;
 		private boolean dayOff;
 
-		public Day(int date, InDay inday, boolean b, boolean c) {
+		public Day(int date, InDay inday, boolean holiday, boolean dayOff) {
 			this.date = date;
 			this.inday = inday;
-			this.holiday = b;
-			this.dayOff = c;
+			this.holiday = holiday;
+			this.dayOff = dayOff;
 		}
 
 		public int getDate() {
@@ -97,6 +97,12 @@ public class Calendar {
 			this.dayOff = dayOff;
 		}
 
+		@Override
+		public String toString() {
+			return "Day [date=" + date + ", inday=" + inday + ", holiday=" + holiday + ", dayOff=" + dayOff + "]";
+		}
+
 	}
 
 }
+
