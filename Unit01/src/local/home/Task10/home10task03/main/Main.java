@@ -1,5 +1,10 @@
 package local.home10task03.main;
 
+/* Создать класс Календарь с внутренним классом, с помощью
+ * объектов которого можно хранить информацию о 
+ * выходных и праздничных днях.  
+ */
+
 import local.home10task03.main.Calendar.Month;
 
 public class Main {
