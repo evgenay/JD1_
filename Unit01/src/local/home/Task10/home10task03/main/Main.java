@@ -41,8 +41,9 @@ public class Main {
 		calendar.addMonth(jule);
 
 		DayLogic logic = new DayLogic();
-		logic.getInfoDay(calendar, "Июль", 3);
-		logic.getInfoDay(calendar, "Июль", 7);
+		logic.getInfoDay(calendar, "Июль", 3,InDay.СРЕДА);
+		logic.getInfoDay(calendar, "Июль", 4,InDay.ЧЕТВЕРГ);
+		logic.getInfoDay(calendar, "Июль", 7,InDay.ВОСКРЕСЕНЬЕ);
 
 	}
 
